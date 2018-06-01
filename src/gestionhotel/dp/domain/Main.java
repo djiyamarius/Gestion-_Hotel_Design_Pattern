@@ -1,3 +1,4 @@
+package gestionhotel.dp.domain;
 
 public class Main {
 
