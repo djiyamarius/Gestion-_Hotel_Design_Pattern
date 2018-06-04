@@ -1,5 +1,8 @@
 package gestionhotel.dp.domain;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class Client {
 	
 	private int idCli;
@@ -10,6 +13,17 @@ public class Client {
 	private String loginCli;
 	private String passwordCli;
 	
+	Collection<Reservation> reserv = new ArrayList<Reservation>();
+	
+	public Collection<Reservation> getReserv() {
+		return reserv;
+	}
+	public void setReserv(Collection<Reservation> reserv) {
+		this.reserv = reserv;
+	}
+	public void setIdCli(int idCli) {
+		this.idCli = idCli;
+	} 	
 	
 	public String getNomCli() {
 		return nomCli;

@@ -10,7 +10,23 @@ public class Reservation {
 	private Date dateDeb;
 	private Date dateFin;
 	
+	DetailService detServ;
+	Client client ;
 	DetailReservation detReserv;
+	
+	
+	public DetailService getDetServ() {
+		return detServ;
+	}
+	public void setDetServ(DetailService detServ) {
+		this.detServ = detServ;
+	}
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
+	}
 	
 	
 	public DetailReservation getDetReserv() {

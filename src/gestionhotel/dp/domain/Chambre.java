@@ -5,7 +5,14 @@ public class Chambre {
 	private Double prix;
 	private String statut;
 	
+	DetailReservation detailres ;
 	
+	public DetailReservation getDetailres() {
+		return detailres;
+	}
+	public void setDetailres(DetailReservation detailres) {
+		this.detailres = detailres;
+	}
 	public int getNoCh() {
 		return noCh;
 	}
