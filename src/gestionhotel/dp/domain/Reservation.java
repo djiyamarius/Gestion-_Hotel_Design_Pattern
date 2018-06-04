@@ -1,5 +1,7 @@
 package gestionhotel.dp.domain;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
 public class Reservation {
@@ -8,9 +10,15 @@ public class Reservation {
 	private Date dateDeb;
 	private Date dateFin;
 	
+	DetailReservation detReserv;
 	
 	
-	
+	public DetailReservation getDetReserv() {
+		return detReserv;
+	}
+	public void setDetReserv(DetailReservation detReserv) {
+		this.detReserv = detReserv;
+	}
 	public int getNoReserv() {
 		return noReserv;
 	}
