@@ -7,6 +7,9 @@ public class Categorie {
 	private String descriptif;
 	
 	
+	private String descriptif2;
+	
+	
 	public int getId() {
 		return id;
 	}
