@@ -8,18 +8,13 @@ public class DetailReservation {
 	private int quantite;
 	private String libelle;
 	
+	
+	/**
+	 * Implémentations des classes d'association
+	 */
 	Collection<Reservation> reservation = new ArrayList<Reservation>();
 	Collection<Chambre> chambre = new ArrayList<Chambre>();
 	
-	public void addDetReservation(Chambre ch,Reservation reserv) {
-		reservation.add(reserv);
-		chambre.add(ch);		
-	}
-	
-	public void removeDetReservation(Chambre ch,Reservation reserv) {
-		reservation.remove(reserv);
-		chambre.remove(ch);		
-	}
 	
 	
 	public Collection<Reservation> getReservation() {
@@ -30,15 +25,14 @@ public class DetailReservation {
 		this.reservation = reservation;
 	}
 
-	public Collection<Chambre> getPassagers() {
+	public Collection<Chambre> getChambre() {
 		return chambre;
 	}
 
-	public void setPassagers(Collection<Chambre> chambre) {
+	public void setChambre(Collection<Chambre> chambre) {
 		this.chambre = chambre;
 	}
-	
-	
+
 	public int getQuantite() {
 		return quantite;
 	}

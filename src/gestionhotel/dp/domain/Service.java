@@ -7,7 +7,18 @@ public class Service {
 	private String descriptif;
 	private Double prixServ;
 	
+	/**
+	 * Implémentations des classes d'association
+	 */
+	DetailService detailServ;
 	
+	
+	public DetailService getDetailServ() {
+		return detailServ;
+	}
+	public void setDetailServ(DetailService detailServ) {
+		this.detailServ = detailServ;
+	}
 	public int getIdServ() {
 		return idServ;
 	}

@@ -1,7 +1,5 @@
 package gestionhotel.dp.domain;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 
 public class Reservation {
@@ -10,6 +8,9 @@ public class Reservation {
 	private Date dateDeb;
 	private Date dateFin;
 	
+	/**
+	 * Implémentations des classes d'association
+	 */
 	DetailReservation detReserv;
 	
 	

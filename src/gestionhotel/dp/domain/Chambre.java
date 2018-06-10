@@ -5,7 +5,18 @@ public class Chambre {
 	private Double prix;
 	private String statut;
 	
+	/**
+	 * Implémentations des classes d'association
+	 */
+	DetailReservation detailReserv;
 	
+	
+	public DetailReservation getDetailReserv() {
+		return detailReserv;
+	}
+	public void setDetailReserv(DetailReservation detailReserv) {
+		this.detailReserv = detailReserv;
+	}
 	public int getNoCh() {
 		return noCh;
 	}
