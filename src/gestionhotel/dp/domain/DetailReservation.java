@@ -10,7 +10,7 @@ public class DetailReservation {
 	
 	
 	/**
-	 * Implémentations des classes d'association
+	 * Implémentations des classes d'associations
 	 */
 	Collection<Reservation> reservation = new ArrayList<Reservation>();
 	Collection<Chambre> chambre = new ArrayList<Chambre>();

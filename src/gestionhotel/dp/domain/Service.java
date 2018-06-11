@@ -5,7 +5,7 @@ public class Service {
 	private int idServ;
 	private String nomServ;
 	private String descriptif;
-	private Double prixServ;
+	private double prixServ;
 	
 	/**
 	 * Implémentations des classes d'association
@@ -37,10 +37,10 @@ public class Service {
 	public void setDescriptif(String descriptif) {
 		this.descriptif = descriptif;
 	}
-	public Double getPrixServ() {
+	public double getPrixServ() {
 		return prixServ;
 	}
-	public void setPrixServ(Double prixServ) {
+	public void setPrixServ(double prixServ) {
 		this.prixServ = prixServ;
 	}
 	

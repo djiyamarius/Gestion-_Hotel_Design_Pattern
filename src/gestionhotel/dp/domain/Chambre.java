@@ -1,12 +1,18 @@
 package gestionhotel.dp.domain;
-
 public class Chambre {
 	private int noCh;
-	private Double prix;
+	private double prix;
 	private String statut;
+	private String type;
 	
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	/**
-	 * Implémentations des classes d'association
+	 * Implémentations des classes d'associations
 	 */
 	DetailReservation detailReserv;
 	
@@ -23,10 +29,10 @@ public class Chambre {
 	public void setNoCh(int noCh) {
 		this.noCh = noCh;
 	}
-	public Double getPrix() {
+	public double getPrix() {
 		return prix;
 	}
-	public void setPrix(Double prix) {
+	public void setPrix(double prix) {
 		this.prix = prix;
 	}
 	public String getStatut() {

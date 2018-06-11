@@ -14,7 +14,7 @@ public class Client {
 	private String passwordCli;
 	
 	/**
-	 * Implémentations des classes d'association
+	 * Implémentations des classes d'associations
 	 */
 	Collection<Reservation> reserv = new ArrayList<Reservation>();
 	

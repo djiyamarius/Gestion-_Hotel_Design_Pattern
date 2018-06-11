@@ -9,7 +9,7 @@ public class DetailService {
 	private String libelle;
 	
 	/**
-	 * Implémentations des classes d'association
+	 * Implémentations des classes d'associations
 	 */
 	Collection<Reservation> reservation = new ArrayList<Reservation>();
 	Collection<Service> chambre = new ArrayList<Service>();

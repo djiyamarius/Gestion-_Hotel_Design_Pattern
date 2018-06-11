@@ -7,9 +7,16 @@ public class Reservation {
 	private int noReserv;
 	private Date dateDeb;
 	private Date dateFin;
+	private String statut;
 	
+	public String getStatut() {
+		return statut;
+	}
+	public void setStatut(String statut) {
+		this.statut = statut;
+	}
 	/**
-	 * Implémentations des classes d'association
+	 * Implémentations des classes d'associations
 	 */
 	DetailReservation detReserv;
 	
