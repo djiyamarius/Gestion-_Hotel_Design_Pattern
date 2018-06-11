@@ -16,6 +16,7 @@ public class Chambre {
 	 */
 	DetailReservation detailReserv;
 	
+	DetailReservation detailres ;
 	
 	public DetailReservation getDetailReserv() {
 		return detailReserv;

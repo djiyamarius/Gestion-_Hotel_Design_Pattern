@@ -13,11 +13,12 @@ public class Client {
 	private String loginCli;
 	private String passwordCli;
 	
+
 	/**
 	 * Implémentations des classes d'associations
 	 */
-	Collection<Reservation> reserv = new ArrayList<Reservation>();
 	
+	Collection<Reservation> reserv = new ArrayList<Reservation>();
 	
 	public Collection<Reservation> getReserv() {
 		return reserv;
@@ -25,6 +26,7 @@ public class Client {
 	public void setReserv(Collection<Reservation> reserv) {
 		this.reserv = reserv;
 	}
+	
 	public void setIdCli(int idCli) {
 		this.idCli = idCli;
 	}

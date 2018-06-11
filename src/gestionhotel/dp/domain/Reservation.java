@@ -9,16 +9,27 @@ public class Reservation {
 	private Date dateFin;
 	private String statut;
 	
-	public String getStatut() {
-		return statut;
-	}
-	public void setStatut(String statut) {
-		this.statut = statut;
-	}
+
 	/**
 	 * Implémentations des classes d'associations
 	 */
+	DetailService detServ;
+	Client client ;
 	DetailReservation detReserv;
+	
+	
+	public DetailService getDetServ() {
+		return detServ;
+	}
+	public void setDetServ(DetailService detServ) {
+		this.detServ = detServ;
+	}
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
+	}
 	
 	
 	public DetailReservation getDetReserv() {
@@ -46,6 +57,13 @@ public class Reservation {
 		this.dateFin = dateFin;
 	}
 	
+
+	public String getStatut() {
+		return statut;
+	}
+	public void setStatut(String statut) {
+		this.statut = statut;
+	}
 	
 
 }

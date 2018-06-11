@@ -8,11 +8,10 @@ public class DetailService {
 	private int quantite;
 	private String libelle;
 	
-	/**
-	 * Implémentations des classes d'associations
-	 */
+
 	Collection<Reservation> reservation = new ArrayList<Reservation>();
-	Collection<Service> chambre = new ArrayList<Service>();
+	Collection<Service> serv = new ArrayList<Service>();
+	
 	
 	
 	public Collection<Reservation> getReservation() {
@@ -23,12 +22,13 @@ public class DetailService {
 		this.reservation = reservation;
 	}
 
-	public Collection<Service> getChambre() {
-		return chambre;
+
+	public Collection<Service> getServ() {
+		return serv;
 	}
 
-	public void setChambre(Collection<Service> chambre) {
-		this.chambre = chambre;
+	public void setServ(Collection<Service> serv) {
+		this.serv = serv;
 	}
 
 	public int getQuantite() {
