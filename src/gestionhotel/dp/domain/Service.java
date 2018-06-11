@@ -8,7 +8,7 @@ public class Service {
 	private double prixServ;
 	
 	/**
-	 * Implémentations des classes d'association
+	 * Implémentations des classes d'associations
 	 */
 	DetailService detailServ;
 	
