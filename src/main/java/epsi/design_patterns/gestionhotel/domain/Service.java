@@ -2,6 +2,8 @@ package epsi.design_patterns.gestionhotel.domain;
 
 public class Service {
 	
+	
+	
 	private int idServ;
 	private String nomServ;
 	private String descriptif;
