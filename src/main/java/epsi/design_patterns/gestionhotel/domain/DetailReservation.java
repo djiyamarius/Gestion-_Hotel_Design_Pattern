@@ -66,6 +66,12 @@ public class DetailReservation {
 	public void setLibelle(String libelle) {
 		this.libelle = libelle;
 	}
+
+	@Override
+	public String toString() {
+		return "DetailReservation [id=" + id + ", quantite=" + quantite + ", libelle=" + libelle + ", reservation="
+				+ reservation + ", chambre=" + chambre + "]";
+	}
 	
 	
 	

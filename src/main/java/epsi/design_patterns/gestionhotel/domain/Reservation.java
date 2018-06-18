@@ -2,6 +2,7 @@ package epsi.design_patterns.gestionhotel.domain;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,11 +23,11 @@ public class Reservation {
 	/**
 	 * Implémentations des classes d'associations
 	 */
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	DetailService detServ;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	Client client ;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	DetailReservation detReserv;
 	
 	//Contructeur
@@ -92,6 +93,12 @@ public class Reservation {
 	}
 	public void setStatut(String statut) {
 		this.statut = statut;
+	}
+
+	@Override
+	public String toString() {
+		return "Reservation [noReserv=" + noReserv + ", dateDeb=" + dateDeb + ", dateFin=" + dateFin + ", statut="
+				+ statut + ", detServ=" + detServ + ", client=" + client + ", detReserv=" + detReserv + "]";
 	}
 	
 

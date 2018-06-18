@@ -1,5 +1,6 @@
 package epsi.design_patterns.gestionhotel.domain;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +20,7 @@ public class Service {
 	/**
 	 * Implémentations des classes d'associations
 	 */
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	DetailService detailServ;
 	
 	
@@ -70,6 +71,12 @@ public class Service {
 	}
 	public void setPrixServ(double prixServ) {
 		this.prixServ = prixServ;
+	}
+
+	@Override
+	public String toString() {
+		return "Service [idServ=" + idServ + ", nomServ=" + nomServ + ", descriptif=" + descriptif + ", prixServ="
+				+ prixServ + ", detailServ=" + detailServ + "]";
 	}
 	
 	

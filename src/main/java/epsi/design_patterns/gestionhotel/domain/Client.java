@@ -102,6 +102,13 @@ public class Client {
 	public int getIdCli() {
 		return idCli;
 	}
+
+	@Override
+	public String toString() {
+		return "Client [idCli=" + idCli + ", nomCli=" + nomCli + ", prenomCli=" + prenomCli + ", adresseCli="
+				+ adresseCli + ", noTelCli=" + noTelCli + ", loginCli=" + loginCli + ", passwordCli=" + passwordCli
+				+ ", reserv=" + reserv + "]";
+	}
 	
 	
 	
