@@ -1,9 +1,49 @@
 package epsi.design_patterns.gestionhotel.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Chambre {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int noCh;
 	private double prix;
 	private String statut;
 	private String type;
+	
+	/**
+	 * Implémentations des classes d'associations
+	 */
+	@ManyToOne
+	DetailReservation detailReserv;
+	
+	
+	/**
+	 * Constructor
+	 */
+	public Chambre( double prix, String statut, String type, DetailReservation detailReserv) {
+		super();
+		this.prix = prix;
+		this.statut = statut;
+		this.type = type;
+		this.detailReserv = detailReserv;
+	}
+	
+	public Chambre() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+	public DetailReservation getDetailReserv() {
+		return detailReserv;
+	}
+	public void setDetailReserv(DetailReservation detailReserv) {
+		this.detailReserv = detailReserv;
+	}
 	
 	public String getType() {
 		return type;
@@ -11,19 +51,7 @@ public class Chambre {
 	public void setType(String type) {
 		this.type = type;
 	}
-	/**
-	 * Implémentations des classes d'associations
-	 */
-	DetailReservation detailReserv;
-	
-	DetailReservation detailres ;
-	
-	public DetailReservation getDetailReserv() {
-		return detailReserv;
-	}
-	public void setDetailReserv(DetailReservation detailReserv) {
-		this.detailReserv = detailReserv;
-	}
+		
 	public int getNoCh() {
 		return noCh;
 	}

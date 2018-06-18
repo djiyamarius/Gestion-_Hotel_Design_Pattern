@@ -3,8 +3,18 @@ package epsi.design_patterns.gestionhotel.domain;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Client {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int idCli;
 	private String nomCli;
 	private String prenomCli;
@@ -18,7 +28,30 @@ public class Client {
 	 * Implémentations des classes d'associations
 	 */
 	
+	@OneToMany(mappedBy="client", cascade = CascadeType.ALL)
 	Collection<Reservation> reserv = new ArrayList<Reservation>();
+	
+	
+	
+	/**
+	 *Contructor
+	 */
+	public Client( String nomCli, String prenomCli, String adresseCli, int noTelCli, String loginCli,
+			String passwordCli, Collection<Reservation> reserv) {
+		super();
+		this.nomCli = nomCli;
+		this.prenomCli = prenomCli;
+		this.adresseCli = adresseCli;
+		this.noTelCli = noTelCli;
+		this.loginCli = loginCli;
+		this.passwordCli = passwordCli;
+		this.reserv = reserv;
+	}
+	
+	public Client() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
 	
 	public Collection<Reservation> getReserv() {
 		return reserv;

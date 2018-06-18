@@ -2,8 +2,17 @@ package epsi.design_patterns.gestionhotel.domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Reservation {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int noReserv;
 	private Date dateDeb;
 	private Date dateFin;
@@ -13,10 +22,30 @@ public class Reservation {
 	/**
 	 * Implémentations des classes d'associations
 	 */
+	@ManyToOne
 	DetailService detServ;
+	@ManyToOne
 	Client client ;
+	@ManyToOne
 	DetailReservation detReserv;
 	
+	//Contructeur
+	
+	public Reservation( Date dateDeb, Date dateFin, String statut, DetailService detServ, Client client,
+			DetailReservation detReserv) {
+		super();
+		this.dateDeb = dateDeb;
+		this.dateFin = dateFin;
+		this.statut = statut;
+		this.detServ = detServ;
+		this.client = client;
+		this.detReserv = detReserv;
+	}
+	
+	public Reservation() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
 	
 	public DetailService getDetServ() {
 		return detServ;

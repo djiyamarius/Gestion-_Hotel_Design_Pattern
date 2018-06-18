@@ -3,13 +3,31 @@ package epsi.design_patterns.gestionhotel.domain;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+@Entity
 public class DetailService {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	int id;
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 	private int quantite;
 	private String libelle;
 	
-
+	@OneToMany(mappedBy="detServ", cascade = CascadeType.ALL)
 	Collection<Reservation> reservation = new ArrayList<Reservation>();
+	
+	@OneToMany(mappedBy="detailServ", cascade = CascadeType.ALL)
 	Collection<Service> serv = new ArrayList<Service>();
 	
 	

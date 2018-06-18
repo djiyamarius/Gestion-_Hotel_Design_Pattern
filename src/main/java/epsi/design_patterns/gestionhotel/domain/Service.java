@@ -1,7 +1,16 @@
 package epsi.design_patterns.gestionhotel.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Service {
 	
+	@Id
+	 @GeneratedValue(strategy=GenerationType.AUTO)
 	private int idServ;
 	private String nomServ;
 	private String descriptif;
@@ -10,7 +19,26 @@ public class Service {
 	/**
 	 * Implémentations des classes d'associations
 	 */
+	@ManyToOne
 	DetailService detailServ;
+	
+	
+	
+	/**
+	 * Constructor
+	 */
+	public Service(String nomServ, String descriptif, double prixServ, DetailService detailServ) {
+		super();
+		this.nomServ = nomServ;
+		this.descriptif = descriptif;
+		this.prixServ = prixServ;
+		this.detailServ = detailServ;
+	}
+	
+	public Service() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
 	
 	
 	public DetailService getDetailServ() {
