@@ -28,12 +28,12 @@ public class Chambre {
 	/**
 	 * Constructor
 	 */
-	public Chambre( double prix, String statut, String type, DetailReservation detailReserv) {
+	public Chambre( double prix, String statut, String type) {
 		super();
 		this.prix = prix;
 		this.statut = statut;
 		this.type = type;
-		this.detailReserv = detailReserv;
+		
 	}
 	
 	public Chambre() {

@@ -28,12 +28,12 @@ public class Service {
 	/**
 	 * Constructor
 	 */
-	public Service(String nomServ, String descriptif, double prixServ, DetailService detailServ) {
+	public Service(String nomServ, String descriptif, double prixServ) {
 		super();
 		this.nomServ = nomServ;
 		this.descriptif = descriptif;
 		this.prixServ = prixServ;
-		this.detailServ = detailServ;
+		
 	}
 	
 	public Service() {

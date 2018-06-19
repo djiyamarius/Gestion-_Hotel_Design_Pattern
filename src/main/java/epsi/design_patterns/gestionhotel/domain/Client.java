@@ -37,7 +37,7 @@ public class Client {
 	 *Contructor
 	 */
 	public Client( String nomCli, String prenomCli, String adresseCli, int noTelCli, String loginCli,
-			String passwordCli, Collection<Reservation> reserv) {
+			String passwordCli) {
 		super();
 		this.nomCli = nomCli;
 		this.prenomCli = prenomCli;
