@@ -13,14 +13,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import epsi.design_patterns.gestionhotel.application.ChambreFactory;
-import epsi.design_patterns.gestionhotel.application.ChambreInterface;
 import epsi.design_patterns.gestionhotel.application.ClientFactory;
 import epsi.design_patterns.gestionhotel.application.CompteClient;
 import epsi.design_patterns.gestionhotel.application.ReservationFactory;
 import epsi.design_patterns.gestionhotel.application.Reserver;
-import epsi.design_patterns.gestionhotel.application.ServiceFactory;
-import epsi.design_patterns.gestionhotel.application.ServiceInterface;
 import epsi.design_patterns.gestionhotel.domain.Chambre;
 import epsi.design_patterns.gestionhotel.domain.ChambreRepository;
 import epsi.design_patterns.gestionhotel.domain.Client;
@@ -38,12 +34,14 @@ public class DesignPatternsApplication {
 	@Autowired
 	ServiceRepository serviceRepository;
 	
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(DesignPatternsApplication.class, args);
 	}
 	
 	@Bean
-	public CommandLineRunner demo1(ChambreRepository repository) {
+	public CommandLineRunner demo1(ChambreRepository  repository) {
 		return (args) -> {
 			
 			Client client = new Client("Clomegah", "Boris", "132 tombe", 06, "Easy1", "Easy001");
@@ -90,7 +88,7 @@ public class DesignPatternsApplication {
 			if (choix==1) {
 				System.out.println("***************Système de Client*************\n");
 				 
-				CompteClient client2 = new ClientFactory();
+				//CompteClient client2 = new ClientFactory();
 				//Scanner sc1 = new Scanner(System.in);
 				System.out.println("Etes vous déja Client : 1(oui)/2(non)");
 				int choix1 = sc.nextInt();
@@ -137,6 +135,8 @@ public class DesignPatternsApplication {
 						
 						Client client3 = new Client(rep1, rep2, rep3, rep4, rep5, rep6);
 						clientRepository.save(client3);
+						
+						System.out.println(client3.toString());
 					}
 
 				 
@@ -155,16 +155,24 @@ public class DesignPatternsApplication {
 					if(choix3==1)
 					{	for(Chambre chambre0 :  repository.findAll())
 						{
-						System.out.println(chambre0.getPrix()+ " "+chambre0.getStatut()+" "+chambre0.getType());
+						System.out.println(chambre0.getNoCh()+" "+chambre0.getPrix()+ " "+chambre0.getStatut()+" "+chambre0.getType());
 						}
 					}
 					else if (choix3==2)
 					{
-						String statut = "libre";
-						for(Chambre chambre8 :  repository.findAll())
-						{
-							System.out.println(chambre8.getPrix()+ " "+chambre8.getStatut()+" "+chambre8.getType());
-						}
+						repository.findById(2)
+						.ifPresent(voit -> {
+							log.info("Voiture found with findById(2):");
+							log.info("--------------------------------");
+							log.info(voit.toString());
+							log.info("");
+						});
+						
+//						String statut = "libre";
+//						for(Chambre chambre8 :  repository.count())
+//						{
+//							System.out.println(chambre8.getPrix()+ " "+chambre8.getStatut()+" "+chambre8.getType());
+//						}
 					}
 					 
 					

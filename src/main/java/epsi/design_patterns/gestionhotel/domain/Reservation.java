@@ -1,4 +1,4 @@
-package epsi.design_patterns.gestionhotel.domain;
+ package epsi.design_patterns.gestionhotel.domain;
 
 import java.util.Date;
 

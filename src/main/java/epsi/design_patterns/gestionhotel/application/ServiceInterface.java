@@ -5,7 +5,7 @@ import epsi.design_patterns.gestionhotel.domain.Service;
 public interface ServiceInterface {
 	
 	public Service createService(String nomServ, String descriptif, double prixServ);
-	public void updateService(Service service, String nomServ, String descriptif, double prixServ);
-	public void deleteService(int idServ);
+	public Service updateService(Service service, String nomServ, String descriptif, double prixServ);
+	public void deleteService(Service service);
 
 }

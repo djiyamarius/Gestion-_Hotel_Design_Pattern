@@ -6,6 +6,6 @@ public interface ChambreInterface {
 	
 	public Chambre createChambre(double prix, String statut,String type);
 	public void updateChambre(Chambre chambre, double prix, String statut,String type);
-	public void deleteChambre(int noCh);
+	public void deleteChambre(Chambre chambre);
 
 }
